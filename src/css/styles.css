@@ -1,20 +1,24 @@
-* {
-  margin: 0;
-  padding: 0;
-  color: #f2f5f7;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
   font-family: sans-serif;
   letter-spacing: 1px;
   font-weight: 300;
+  margin: 0;
+  padding: 0;
 }
-body {
-  overflow-x: hidden;
-}
+
 nav {
   height: 6rem;
   width: 100vw;
   background-color: #131418;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
   display: flex;
+  justify-content: space-between;
   position: fixed;
   z-index: 10;
 }
@@ -33,7 +37,7 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
-  width: 88vw;
+  width: 50vw;
   padding-left: 50px;
   justify-content: space-evenly;
   align-items: center;
@@ -43,6 +47,7 @@ nav {
   position: relative;
 }
 .nav-links li a {
+  color: #f2f5f7;
   font-size: medium;
   text-decoration: none;
   margin: 0 0.7vw;
@@ -65,6 +70,14 @@ nav {
   width: 100%;
 }
 
+.nav-links li a.active::before {
+  width: 100%;
+}
+
+/* .nav-links li a.active {
+  font-weight: 600;
+} */
+
 /*Styling Hamburger Icon*/
 .hamburger div {
   width: 30px;
@@ -75,6 +88,10 @@ nav {
 }
 .hamburger {
   display: none;
+}
+
+main {
+  padding-top: 6rem;
 }
 
 /*Stying for small screens*/

@@ -1,9 +1,22 @@
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
+const navActive = document.querySelectorAll("nav a");
 const links = document.querySelectorAll(".nav-links li");
 const tab1 = document.getElementById("tab1");
 const tab2 = document.getElementById("tab2");
 const tab3 = document.getElementById("tab3");
+
+navActive.forEach((link) => {
+  link.addEventListener("click", function () {
+    // Hapus class 'active' dari semua link
+    navActive.forEach((link) => {
+      link.classList.remove("active");
+    });
+
+    // Tambahkan class 'active' hanya ke link yang diklik
+    this.classList.add("active");
+  });
+});
 
 function handleTabClick(tabElement) {
   showTab(tabElement);
