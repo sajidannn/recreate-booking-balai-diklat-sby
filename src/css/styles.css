@@ -1,24 +1,24 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: sans-serif;
-  letter-spacing: 1px;
-  font-weight: 300;
+* {
   margin: 0;
   padding: 0;
+  font-family: sans-serif;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 300;
 }
-
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
 nav {
   height: 6rem;
   width: 100vw;
-  background-color: #131418;
+  background-color: #6e84dd;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+
   display: flex;
-  justify-content: space-between;
   position: fixed;
   z-index: 10;
 }
@@ -37,7 +37,7 @@ nav {
 .nav-links {
   display: flex;
   list-style: none;
-  width: 50vw;
+  width: 88vw;
   padding-left: 50px;
   justify-content: space-evenly;
   align-items: center;
@@ -47,7 +47,6 @@ nav {
   position: relative;
 }
 .nav-links li a {
-  color: #f2f5f7;
   font-size: medium;
   text-decoration: none;
   margin: 0 0.7vw;
@@ -57,7 +56,7 @@ nav {
 }
 .nav-links li a::before {
   content: "";
-  background: #f2f5f7;
+  background: #6e84dd;
   display: block;
   position: absolute;
   bottom: -3px;
@@ -70,28 +69,16 @@ nav {
   width: 100%;
 }
 
-.nav-links li a.active::before {
-  width: 100%;
-}
-
-/* .nav-links li a.active {
-  font-weight: 600;
-} */
-
 /*Styling Hamburger Icon*/
 .hamburger div {
   width: 30px;
   height: 3px;
-  background: #f2f5f7;
+  background: #6e84dd;
   margin: 5px;
   transition: all 0.3s ease;
 }
 .hamburger {
   display: none;
-}
-
-main {
-  padding-top: 6rem;
 }
 
 /*Stying for small screens*/
@@ -112,7 +99,7 @@ main {
   }
   .nav-links {
     position: fixed;
-    background: #131418;
+    background: #819aff;
     height: 100vh;
     width: 100%;
     flex-direction: column;
@@ -166,4 +153,125 @@ main {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
+}
+/* Pengaturan Dasar Footer */
+footer {
+  background-color: #35265E;
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+/* Judul Footer */
+.title-footer {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Konten Footer */
+.content-footer {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Pengaturan Container dan Row */
+.container {
+  max-width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+/* Pengaturan Kolom */
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Tata Letak Footer */
+.footer {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* Aturan Tambahan */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+  .container,
+  .container-sm {
+      max-width: 540px;
+  }
+}
+
+.modul h2{
+color : #35265E;
+}
+
+.modul-box {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+gap: 20px;
+list-style-type : none;
+}
+
+
+.modul-box .card {
+width: 30%;
+background-color: #c7cce2;
+border-radius: 12px;
+box-shadow: 8px 8px 8px 0 #707cb4;
+text-decoration: none;
+color: #263571;
+transition: background-color 0.3s ease;
+padding: 1rem; 
+}
+
+.modul-box .card:hover {
+background-color: #6e84dd;
+box-shadow: 10px 10px 20px 0;
+}
+
+.card img {
+width: 100%;
+border-radius: 12px 12px 0 0;
+}
+
+.card h3,
+.card p {
+margin-inline: 15px;
+color : #35265E;
+padding : 1rem;
+}
+
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+main {
+margin-top: 100px; 
+padding: 70px; 
+}
+
+.card{
+  margin-bottom: 1rem;
 }
