@@ -113,70 +113,12 @@ nav {
 
 main {
   padding-top: 6rem;
+  margin-top: 100px;
+  padding: 3px; /* Sesuaikan padding-bottom */
+  
 }
 
 /*Stying for small screens*/
-@media screen and (max-width: 800px) {
-  nav {
-    position: fixed;
-    z-index: 3;
-  }
-  .hamburger {
-    display: block;
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
-    top: 50%;
-    transform: translate(-5%, -50%);
-    z-index: 2;
-    transition: all 0.7s ease;
-  }
-  .nav-links {
-    position: fixed;
-    background: #131418;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    clip-path: circle(50px at 90% -20%);
-    -webkit-clip-path: circle(50px at 90% -10%);
-    transition: all 1s ease-out;
-    pointer-events: none;
-  }
-  .nav-links.open {
-    clip-path: circle(1000px at 90% -10%);
-    -webkit-clip-path: circle(1000px at 90% -10%);
-    pointer-events: all;
-  }
-  .nav-links li {
-    opacity: 0;
-  }
-  .nav-links li:nth-child(1) {
-    transition: all 0.5s ease 0.2s;
-  }
-  .nav-links li:nth-child(2) {
-    transition: all 0.5s ease 0.4s;
-  }
-  .nav-links li:nth-child(3) {
-    transition: all 0.5s ease 0.6s;
-  }
-  .nav-links li:nth-child(4) {
-    transition: all 0.5s ease 0.7s;
-  }
-  .nav-links li:nth-child(5) {
-    transition: all 0.5s ease 0.8s;
-  }
-  .nav-links li:nth-child(6) {
-    transition: all 0.5s ease 0.9s;
-    margin: 0;
-  }
-  .nav-links li:nth-child(7) {
-    transition: all 0.5s ease 1s;
-    margin: 0;
-  }
-  li.fade {
-    opacity: 1;
-  }
-}
 /*Animating Hamburger Icon on Click*/
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
@@ -242,6 +184,70 @@ footer {
   padding-bottom: 20px;
 }
 
+* {box-sizing: border-box}
+.mySlides1 {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.text a {
+  color: white;
+}
+
+/* Media query for smaller screens (tablets and phones) */
+
+
+/* On hover, remove background color and change text color */
+.prev:hover, .next:hover {
+  background-color: transparent;
+  color: white;
+}
+
+
 /* Aturan Tambahan */
 *,
 ::after,
@@ -249,15 +255,11 @@ footer {
   box-sizing: border-box;
 }
 
-@media (min-width: 576px) {
-  .container,
-  .container-sm {
-      max-width: 540px;
-  }
-}
-
 .modul h2{
 color : #35265E;
+display: flex;
+align-items: center; 
+justify-content: center;
 }
 
 .modul-box {
@@ -271,6 +273,7 @@ list-style-type : none;
 
 .modul-box .card {
 width: 30%;
+height: 100%;
 background-color: #c7cce2;
 border-radius: 12px;
 box-shadow: 8px 8px 8px 0 #707cb4;
@@ -278,6 +281,7 @@ text-decoration: none;
 color: #263571;
 transition: background-color 0.3s ease;
 padding: 1rem; 
+overflow: hidden; 
 }
 
 .modul-box .card:hover {
@@ -292,9 +296,9 @@ border-radius: 12px 12px 0 0;
 
 .card h3,
 .card p {
-margin-inline: 15px;
+margin-inline: 0;
 color : #35265E;
-padding : 1rem;
+padding : 10px;
 }
 
 header {
@@ -302,13 +306,108 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
+z-index: 10;
 }
 
 main {
 margin-top: 100px; 
-padding: 70px; 
+padding: 3px; 
 }
 
 .card{
   margin-bottom: 1rem;
 }
+
+@media screen and (max-width: 800px) {
+
+  nav {
+    position: fixed;
+    z-index: 3;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+  }
+  .nav-links {
+    position: fixed;
+    background: #131418;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    -webkit-clip-path: circle(50px at 90% -10%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+  }
+  .nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    -webkit-clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+  }
+  .nav-links li {
+    opacity: 0;
+  }
+  .nav-links li:nth-child(1) {
+    transition: all 0.5s ease 0.2s;
+  }
+  .nav-links li:nth-child(2) {
+    transition: all 0.5s ease 0.4s;
+  }
+  .nav-links li:nth-child(3) {
+    transition: all 0.5s ease 0.6s;
+  }
+  .nav-links li:nth-child(4) {
+    transition: all 0.5s ease 0.7s;
+  }
+  .nav-links li:nth-child(5) {
+    transition: all 0.5s ease 0.8s;
+  }
+  .nav-links li:nth-child(6) {
+    transition: all 0.5s ease 0.9s;
+    margin: 0;
+  }
+  .nav-links li:nth-child(7) {
+    transition: all 0.5s ease 1s;
+    margin: 0;
+  }
+  li.fade {
+    opacity: 1;
+  }
+  .modul-box .card {
+    width: 100%; /* Mengatur lebar elemen tab 2 menjadi 100% saat lebar layar <= 800px */
+  }
+  .slideshow-container {
+    max-width: 100%; /* Sesuaikan dengan lebar layar */
+  }
+  
+  .mySlides1 {
+    display: block; /* Tampilkan slide */
+  }
+  .prev, .next {
+    font-size: 14px; /* Sesuaikan ukuran font tombol sebelum dan sesudah */
+    padding: 12px; /* Sesuaikan ukuran padding tombol */
+    margin-top: -16px; /* Sesuaikan posisi tombol */
+  }
+
+  .text {
+     display: none;
+  }
+  /* Sesuaikan posisi tombol panah untuk perangkat seluler */
+  .prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+  }
+}
+
+
