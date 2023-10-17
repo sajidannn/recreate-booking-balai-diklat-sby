@@ -460,6 +460,7 @@ footer {
 }
 
 .kegiatan .card1 img {
+  width:100%;
   max-height: 157px;
   display: block;
   object-fit: cover;
