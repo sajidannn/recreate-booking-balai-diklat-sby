@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="../src/css/style-form.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../src/assets/logo.png" />
+      <h1 id="title">Formulir Permohonan</h1>
+    </header>
+    <main>
+      <p id="description">Silakan isi formulir permohonan ini</p>
+
+      <form id="form-permohonan">
+        <table class="table-form" cellspacing="0" cellpadding="3">
+          <thead>
+            <tr>
+              <th width="10%"></th>
+              <th width="3%"></th>
+              <th width="82%"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label for="name" id="name-label">Nama</label></td>
+              <td>:</td>
+              <td>
+                <input type="text" id="name" name="name" required />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="email" id="email-label">Email</label></td>
+              <td>:</td>
+              <td>
+                <input type="email" id="email" name="email" required />
+              </td>
+            </tr>
+            <tr>
+              <td><label for="telepon" id="telp-label">No. Telp</label></td>
+              <td>:</td>
+              <td>
+                <input type="tel" id="number" name="telepon" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="instansi" id="instansi-label">Nama instansi</label>
+              </td>
+              <td>:</td>
+              <td>
+                <input type="text" id="instansi" name="instansi" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="kegiatan" id="kegiatan-label">Nama kegiatan</label>
+              </td>
+              <td>:</td>
+              <td>
+                <input type="text" id="kegiatan" name="kegiatan" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="peserta" id="peserta-label">Jumlah peserta</label>
+              </td>
+              <td>:</td>
+              <td>
+                <input
+                  type="number"
+                  min="1"
+                  max="5000"
+                  id="peserta"
+                  name="peserta"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="mulai" id="mulai-label">Tanggal mulai</label>
+              </td>
+              <td>:</td>
+              <td>
+                <input type="date" id="mulai" name="mulai" />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="selesai" id="selesai-label">Tanggal selesai</label>
+              </td>
+              <td>:</td>
+              <td>
+                <input type="date" id="selesai" name="selesai" />
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <fieldset>
+                  <legend>Pilih fasilitas utama yang akan anda pakai</legend>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="seminar"
+                    />Graha utama seminar</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="lomba-pentas"
+                    />Graha utama lomba dan pentas</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="pernikahan"
+                    />Graha utama pernikahan</label
+                  >
+                </fieldset>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">
+                <fieldset>
+                  <legend>Pilih fasilitas tambahan yang akan anda pakai</legend>
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="listrik"
+                    />Listrik Tambahan (1.500 s.d 3.000 watt)</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="listrik"
+                    />Listrik Tambahan (3.000 watt s.d 10.000 watt)</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="panggung"
+                    />Panggung hiburan</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="kantin"
+                    />Kantin</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="rapat"
+                    />Ruang rapat</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="rapat"
+                    />Ruang multimedia</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="fasilitas"
+                      value="other"
+                    />Lapangan</label
+                  >
+                </fieldset>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="file" id="file-label"
+                  >Upload surat permohonan</label
+                >
+              </td>
+              <td>:</td>
+              <td>
+                <input type="file" id="file" name="file" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="no-surat" id="no-surat-label"
+                  >Nomor surat permohonan</label
+                >
+              </td>
+              <td>:</td>
+              <td>
+                <input type="text" id="no-surat" name="no-surat" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="tgl-surat" id="tgl-surat-label"
+                  >Tanggal surat permohonan</label
+                >
+              </td>
+              <td>:</td>
+              <td>
+                <input type="date" id="tgl-surat" name="tgl-surat" required />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="perihal" id="perihal-label"
+                  >Perihal surat permohonan</label
+                >
+              </td>
+              <td>:</td>
+              <td>
+                <input type="text" id="perihal" name="perihal" required />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="form-button">
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+      <p>
+        Jika memiliki pertanyaan silahkan hubungi nomor berikut:
+        <a href="tel:+6285111222069">85111222069</a>
+      </p>
+    </main>
+    <script type="module" src="../src/scriptForm.js "></script>
+  </body>
+</html>
