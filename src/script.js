@@ -86,21 +86,11 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("toggle");
 });
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+let slideIndex = 1; // Initialize slideIndex
 
 function showSlides(n) {
   let i;
   let x = document.getElementsByClassName("mySlides1");
-  let modal = document.getElementById("myModal");
 
   if (n > x.length) {
     slideIndex = 1;
@@ -116,13 +106,18 @@ function showSlides(n) {
   x[slideIndex - 1].style.display = "block";
 }
 
-export let tanggalMulai = 20;
-export let tanggalSelesai;
+// Function to go to the previous slide
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Initial call to show the first slide
+showSlides(slideIndex);
 
 btnTgl.onclick = function () {
   // Dapatkan tanggal dari kedua input
-  tanggalMulai = inputMulai.value;
-  tanggalSelesai = inputSelesai.value;
+  let tanggalMulai = inputMulai.value;
+  let tanggalSelesai = inputSelesai.value;
 
   // Daftar tanggal yang tidak tersedia
   var tanggalTidakTersedia = [
