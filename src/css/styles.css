@@ -94,10 +94,6 @@ nav {
   width: 100%;
 }
 
-/* .nav-links li a.active {
-  font-weight: 600;
-} */
-
 /*Styling Hamburger Icon*/
 .hamburger div {
   width: 30px;
@@ -120,28 +116,6 @@ nav {
 }
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px, -6px);
-}
-
-/* Pengaturan Container dan Row */
-.container {
-  max-width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -20px;
-  margin-left: -20px;
-}
-
-/* Pengaturan Kolom */
-.col-12 {
-  flex: 0 0 100%;
-  max-width: 100%;
 }
 
 /* Slideshow container */
@@ -205,7 +179,7 @@ nav {
   color: white;
 }
 
-/* tab 3 fasilitas */
+/* tab 2 fasilitas */
 
 .modul h2 {
   display: flex;
@@ -252,21 +226,29 @@ nav {
   overflow: hidden;
 }
 
+/* Saat card dihover, latar belakang dan bayangan box diubah */
 .modul .card:hover {
   background-color: #6e84dd;
   box-shadow: 10px 10px 20px 0;
 }
 
+/* Pada teks dalam card */
+.modul .card h3,
+.modul .card p {
+  margin: 0;
+  padding: 1rem;
+  transition: color 0.3s; /* Efek transisi saat mengubah warna teks */
+}
+
+/* Saat card dihover, ubah warna teks menjadi putih */
+.modul .card:hover h3,
+.modul .card:hover p {
+  color: #e6e4e4;
+}
+
 .card img {
   width: 100%;
   border-radius: 12px 12px 0 0;
-}
-
-.card h3,
-.card p {
-  margin: 0;
-  color: #35265e;
-  padding: 1rem;
 }
 
 .pesan-button {

@@ -86,7 +86,7 @@ hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("toggle");
 });
 
-let slideIndex = 1; // Initialize slideIndex
+let slideIndex = 1; // Inisialisasi slideIndex
 
 function showSlides(n) {
   let i;
@@ -106,13 +106,17 @@ function showSlides(n) {
   x[slideIndex - 1].style.display = "block";
 }
 
-// Function to go to the previous slide
 function plusSlides(n) {
   showSlides((slideIndex += n));
 }
 
-// Initial call to show the first slide
+function autoSlide() {
+  plusSlides(1); // Pindah ke slide berikutnya secara otomatis
+}
+
+// Inisialisasi dan atur interval untuk pergeseran otomatis (misalnya setiap 3 detik)
 showSlides(slideIndex);
+setInterval(autoSlide, 3000); // 3000ms (3 detik)
 
 btnTgl.onclick = function () {
   // Dapatkan tanggal dari kedua input
